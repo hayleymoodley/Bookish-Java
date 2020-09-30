@@ -1,5 +1,6 @@
 package org.softwire.training.bookish.controllers;
 
+import org.softwire.training.bookish.models.database.Book;
 import org.softwire.training.bookish.models.database.Technology;
 import org.softwire.training.bookish.models.page.AboutPageModel;
 import org.softwire.training.bookish.services.TechnologyService;
@@ -27,27 +28,27 @@ public class AboutUsController {
     @RequestMapping("")
     ModelAndView aboutUs() {
 
-        List<Technology> allTechnologies = technologyService.getAllTechnologies();
+        List<Book> allBooks = technologyService.getAllBooks();
 
         AboutPageModel aboutPageModel = new AboutPageModel();
-        aboutPageModel.setTechnologies(allTechnologies);
+        aboutPageModel.setBooks(allBooks);
 
         return new ModelAndView("about", "model", aboutPageModel);
     }
 
-    @RequestMapping("/add-technology")
-    RedirectView addTechnology(@ModelAttribute Technology technology) {
-
-        technologyService.addTechnology(technology);
-
-        return new RedirectView("/about");
-    }
-
-    @RequestMapping("/delete-technology")
-    RedirectView deleteTechnology(@RequestParam int technologyId) {
-
-        technologyService.deleteTechnology(technologyId);
-
-        return new RedirectView("/about");
-    }
+//    @RequestMapping("/add-technology")
+//    RedirectView addTechnology(@ModelAttribute Technology technology) {
+//
+//        technologyService.addTechnology(technology);
+//
+//        return new RedirectView("/about");
+//    }
+//
+//    @RequestMapping("/delete-technology")
+//    RedirectView deleteTechnology(@RequestParam int technologyId) {
+//
+//        technologyService.deleteTechnology(technologyId);
+//
+//        return new RedirectView("/about");
+//    }
 }

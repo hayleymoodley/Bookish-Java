@@ -39,15 +39,6 @@ public class Main {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-
-
-
-
-
-
-
-
-
     }
 
     private static void jdbiMethod(String connectionString) {
