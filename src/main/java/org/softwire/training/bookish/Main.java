@@ -19,6 +19,7 @@ public class Main {
 
         jdbcMethod(connectionString);
         jdbiMethod(connectionString);
+
     }
 
     private static void jdbcMethod(String connectionString) throws SQLException {

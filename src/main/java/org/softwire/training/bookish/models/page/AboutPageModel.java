@@ -1,17 +1,16 @@
 package org.softwire.training.bookish.models.page;
 
 import org.softwire.training.bookish.models.database.Book;
-import org.softwire.training.bookish.models.database.Technology;
 
 import java.util.List;
 
 public class AboutPageModel {
-    private List<Book> Books;
+    private List<Book> books;
 
     public List<Book> getBooks() {
-        return Books;
+        return books;
     }
     public void setBooks(List<Book> Books) {
-        this.Books = Books;
+        this.books = Books;
     }
 }
