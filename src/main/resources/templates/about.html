@@ -29,10 +29,9 @@
 <!--                    <a th:href="${'/about/delete-technology?technologyId=' + Book.id}" class="delete-button">delete</a>-->
                 </div>
             </div>
-            <div class="Author-list">
-                <div th:each="Author : ${model.getAuthors()}" class="Authors">
-                    <p> List of authors: <span th:text="${Author.getAuthorName}"></span></p>
-
+            <div class="author-list">
+                <div th:each="author : ${model.getAuthors()}" class="Author">
+                    <p> List of authors: <span th:text="${author.getAuthorName()}"></span></p>
                     <!--                    <img th:src="${technology.logoUrl}" th:title="${technology.name}" />-->
                     <!--                    <a th:href="${'/about/delete-technology?technologyId=' + Book.id}" class="delete-button">delete</a>-->
                 </div>

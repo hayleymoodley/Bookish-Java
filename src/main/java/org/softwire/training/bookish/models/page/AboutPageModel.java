@@ -20,8 +20,8 @@ public class AboutPageModel {
     public List<Author> getAuthors() {
         return authors;
     }
-    public void setAuthors(List<Author> authors) {
-        this.authors = authors;
+    public void setAuthors(List<Author> Authors) {
+        this.authors = Authors;
     }
 
 }
