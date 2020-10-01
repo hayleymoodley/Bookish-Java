@@ -22,14 +22,25 @@
 
             <div class="book-list">
                 <div th:each="book : ${model.getBooks()}" class="Book">
-                    <p> You entered this book: <span th:text="${book.getBookName()}"></span></p>
+                    <p> List of books: <span th:text="${book.getBookName()}"></span></p>
+<!--                    <p> List of authors: <span th:text="${book.getBookName()}"></span></p>-->
 
 <!--                    <img th:src="${technology.logoUrl}" th:title="${technology.name}" />-->
 <!--                    <a th:href="${'/about/delete-technology?technologyId=' + Book.id}" class="delete-button">delete</a>-->
                 </div>
             </div>
+            <div class="Author-list">
+                <div th:each="Author : ${model.getAuthors()}" class="Authors">
+                    <p> List of authors: <span th:text="${Author.getAuthorName}"></span></p>
 
-<!--            <h2>Add a technology:</h2>-->
+                    <!--                    <img th:src="${technology.logoUrl}" th:title="${technology.name}" />-->
+                    <!--                    <a th:href="${'/about/delete-technology?technologyId=' + Book.id}" class="delete-button">delete</a>-->
+                </div>
+            </div>
+        </div>
+
+
+            <!--            <h2>Add a technology:</h2>-->
 <!--            <form th:action="@{/about/add-technology}" method="post">-->
 <!--                <div class="add-tech-row">-->
 <!--                    <label>-->

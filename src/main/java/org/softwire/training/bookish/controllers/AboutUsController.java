@@ -1,5 +1,6 @@
 package org.softwire.training.bookish.controllers;
 
+import org.softwire.training.bookish.models.database.Author;
 import org.softwire.training.bookish.models.database.Book;
 import org.softwire.training.bookish.models.database.Technology;
 import org.softwire.training.bookish.models.page.AboutPageModel;
@@ -29,9 +30,13 @@ public class AboutUsController {
     ModelAndView aboutUs() {
 
         List<Book> allBooks = technologyService.getAllBooks();
+        List<Author> allAuthors = technologyService.getAllAuthors();
 
         AboutPageModel aboutPageModel = new AboutPageModel();
         aboutPageModel.setBooks(allBooks);
+        aboutPageModel.setAuthors(allAuthors);
+
+
 
         return new ModelAndView("about", "model", aboutPageModel);
     }

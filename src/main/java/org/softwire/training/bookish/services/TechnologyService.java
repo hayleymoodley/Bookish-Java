@@ -1,5 +1,6 @@
 package org.softwire.training.bookish.services;
 
+import org.softwire.training.bookish.models.database.Author;
 import org.softwire.training.bookish.models.database.Book;
 import org.softwire.training.bookish.models.database.Technology;
 import org.springframework.stereotype.Service;
@@ -16,6 +17,14 @@ public class TechnologyService extends DatabaseService {
                         .list()
         );
     }
+    public List<Author> getAllAuthors() {
+        return jdbi.withHandle(handle ->
+                handle.createQuery("SELECT * FROM Authors")
+                        .mapToBean(Author.class)
+                        .list()
+        );
+    }
+
 
 //    public void addTechnology(Technology technology) {
 //        jdbi.useHandle(handle ->
